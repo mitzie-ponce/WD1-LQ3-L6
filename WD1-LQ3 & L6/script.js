@@ -1,9 +1,4 @@
-/* ===============================
-   SCRIPT.JS – BASIC INTERACTIVITY
-================================*/
-
-/* Highlight active page in the header */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll("nav a");
 
@@ -13,8 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-/* Simple fade-in animation on scroll */
+
 const elements = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(entries => {
@@ -32,8 +26,7 @@ elements.forEach(el => {
     el.style.transition = "all 0.6s ease";
     observer.observe(el);
 });
-
-/* Optional: Smooth back-to-top button (if added later) */
+
 const toTopBtn = document.querySelector("#backToTop");
 
 if (toTopBtn) {
